@@ -16,7 +16,7 @@ public class ServerFile {
             serverSocket = new ServerSocket(10000);
             System.out.println("2. 서버소켓 생성 완료: 클라이언트 접속 대기 중");
             socket = serverSocket.accept(); // 클라이언트 접속 대기 중...
-            System.out.println("3. 클라이언트 연결 완료");
+            System.out.println("3. 클라이언트 연결 완료 - buffer연결완료(read)");
 
             br = new BufferedReader(new InputStreamReader(socket.getInputStream())); // socket.getInputStream()는 클라이언트와 소켓이 연결된 바이트 스트림 선
             String msg = br.readLine();
