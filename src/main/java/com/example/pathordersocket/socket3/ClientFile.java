@@ -47,11 +47,13 @@ public class ClientFile {
 
         @Override
         public void run() {
-            try {
-                String msg = br.readLine();
-                System.out.println("서버로부터 받은 메시지: " + msg);
-            } catch (Exception e) {
-                System.out.println("클라이언트소켓쪽에서 서버소켓 메시지를 입력받는 중 오류가 발생했습니다: " + e.getMessage());
+            while (true) {
+                try {
+                    String msg = br.readLine();
+                    System.out.println("서버로부터 받은 메시지: " + msg);
+                } catch (Exception e) {
+                    System.out.println("클라이언트소켓쪽에서 서버소켓 메시지를 입력받는 중 오류가 발생했습니다: " + e.getMessage());
+                }
             }
         }
     }
